@@ -46,8 +46,10 @@ let swiperProjects = new Swiper(".projects__container", {
             slidesPerView: 2,
             spaceBetween: -56,
         },
+        1920: {
+            slidesPerView: 1
+        }
     },
-    mousewheel: true,
     keyboard: true,
 });
 
