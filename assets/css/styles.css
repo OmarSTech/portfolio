@@ -331,7 +331,11 @@ body.dark-theme {
 }
 
 .home__profile img{
-  width: 150px;
+  height: auto;
+  max-width: 450%;
+  position: relative;
+  top: 250px;
+  left: 12px;
 }
 
 .home__shape-waves,
