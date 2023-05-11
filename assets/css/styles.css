@@ -403,6 +403,7 @@ opacity: .1;
 }
 
 /*=============== SKILLS ===============*/
+
 .skills__container{
   row-gap: 3.5rem;
 }
@@ -675,6 +676,7 @@ opacity: .1;
   column-gap: .5rem;
   color: var(--title-color);
   font-size: var(--small-font-size);
+  justify-self: right;
 }
 
 .contact__button i{
@@ -955,7 +957,6 @@ opacity: .1;
 
   .contact__container{
     justify-content: center;
-    column-gap: 8rem;
   }
 }
 
