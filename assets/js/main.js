@@ -43,7 +43,7 @@ let swiperProjects = new Swiper(".projects__container", {
     },
     breakpoints: {
         1200: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: -56,
         },
         1920: {
@@ -167,3 +167,19 @@ const scrollHeader = () =>{
 window.addEventListener('scroll', scrollHeader)
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 300,
+    //reset: true //Repeat animations
+})
+
+sr.reveal('.home__data, .projects__container, .footer__container')
+sr.reveal('.home__info div', {delay: 600, origin: 'bottom', interval: 100})
+sr.reveal('.skills__content:nth-child(1)', {origin: 'left'})
+sr.reveal('.skills__content:nth-child(2)', {origin: 'right'})
+sr.reveal('.skills__content:nth-child(3)', {origin: 'bottom'})
+sr.reveal('.qualification__content', {interval: 100})
+sr.reveal('.contact__content', {origin: 'left'})
+sr.reveal('.home__title', {origin: 'left'})
