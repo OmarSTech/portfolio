@@ -17,8 +17,8 @@
   /* Change the first number */
   /* Blue: 207 - Purple: 250 - Pink: 356 - Teal: 174 */
   --gradient-color: linear-gradient(180deg,
-                      hsla(207, 48%, 72%, 0),
-                      hsla(207, 65%, 65%, 1));
+                      hsla(250, 48%, 72%, 0),
+                      hsla(250, 65%, 65%, 1));
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -96,7 +96,7 @@ img {
 }
 
 /*=============== THEME ===============*/
-.nav_buttons{
+.nav__buttons{
   display: flex;
   align-items: center;
   column-gap: 1.5rem;
@@ -153,21 +153,22 @@ body.dark-theme {
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
-.container {
+.container{
   max-width: 1024px;
   margin-inline: 1.5rem;
 }
 
-.grid {
+.grid{
   display: grid;
   gap: 1.5rem;
 }
 
-.section {
+.section{
   padding-block: 2.5rem;
+  align-self: center;
 }
 
-.section__border {
+.section__border{
   border-bottom: 1px solid var(--title-color);
   padding-bottom: 3.5rem;
 }
@@ -258,7 +259,7 @@ body.dark-theme {
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: .25 rem;
+    row-gap: .25rem;
     font-size: var(--smaller-font-size);
     color: var(--text-color-light);
     transition: color .3s;
@@ -298,9 +299,13 @@ body.dark-theme {
 
 .home__data{
   row-gap: 1.5rem;
+  justify-content: space-evenly;
+  justify-items: end;
 }
 
 .home__title{
+  position: flex;
+  justify-self: center;
   text-align: center;
   font-size: var(--biggest-font-size);
   letter-spacing: .3px;
@@ -308,7 +313,7 @@ body.dark-theme {
 }
 
 .home__blob{
-  position: relative;
+  position: absolute;
   width: 200px;
   height: 290px;
   background-color: var(--body-color);
@@ -362,6 +367,7 @@ opacity: .1;
   justify-self: center;
   display: flex;
   column-gap: 1.25rem;
+  padding-top: 22rem;
 }
 
 .home__social-link{
@@ -509,7 +515,7 @@ opacity: .1;
 
 .qualification__title i{
   font-size: 1rem;
-  font-weight: intitial;
+  font-weight: initial;
 }
 
 .qualification__info{
@@ -545,6 +551,7 @@ opacity: .1;
 .projects__content{
   display: grid;
   justify-content: center;
+  justify-items: center;
 }
 
 .projects__img{
@@ -626,14 +633,13 @@ opacity: .1;
 
 /*=============== CONTACT ===============*/
 .contact__container{
-  row-gap: 3.5rem;
+ row-gap: 3.5rem;
 }
 
 .contact__title{
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: .5rem;
   font-size: var(--small-font-size);
   font-weight: var(--font-semi-bold);
   margin-bottom: 2.5rem;
@@ -644,36 +650,14 @@ opacity: .1;
   font-weight: initial;
 }
 
-.contact__info,
-.contact__data,
 .contact__form{
   display: grid;
-}
-
-.contact__info{
-  row-gap: 2rem;
-}
-
-.contact__data{
-  row-gap: .75rem;
-}
-
-.contact__data-title{
-  font-size: var(--small-font-size);
-  color: var(--text-color-light);
-}
-
-.contact__data-info{
-  font-size: var(--small-font-size);
-  font-family: var(--title-font);
-  color: var(--title-color);
 }
 
 .contact__button{
   width: max-content;
   display: inline-flex;
   align-items: center;
-  column-gap: .5rem;
   color: var(--title-color);
   font-size: var(--small-font-size);
   justify-self: right;
@@ -875,7 +859,7 @@ opacity: .1;
   }
 
   .skills__info{
-    grid-template-columns: repeat(2. 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .projects__img{
@@ -901,8 +885,6 @@ opacity: .1;
 
   .projects__container{
     width: 400px;
-  }
-  .projects__container{
     overflow: hidden;
   }
 
@@ -917,14 +899,10 @@ opacity: .1;
 
 @media screen and (min-width: 767px){
   .home__container{
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   .home__data{
     order: 2;
-  }
-  .home__info:nth-child(3){
-    order: 3;
-    text-align: right;
   }
   .home__info{
     margin-top: 10rem;
@@ -934,17 +912,21 @@ opacity: .1;
   }
 
   .skills__container,
-  .qualification__container,
-  .contact__container{
+  .qualification__container{
     grid-template-columns: repeat(2, max-content);
   }
   .skills__container{
     column-gap: 5rem;
   }
 
+  .skills__conte:nth-child(3){
+    display: flex;
+    justify-self: center;
+  }
+
   .qualification__container{
     justify-content: center;
-    column-gap: 10rem;
+    column-gap: 4rem;
   }
 
   .projects__container{
@@ -980,7 +962,7 @@ opacity: .1;
   }
   .nav__link i,
   .nav__toggle,
-  .nav_close{
+  .nav__close{
     display: none;
   }
   .nav__menu{
@@ -1041,6 +1023,7 @@ opacity: .1;
 }
 
 @media screen and(min-width: 1200px){
+
   .section__border{
     padding-bottom: 6rem;
   }
