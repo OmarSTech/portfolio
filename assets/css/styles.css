@@ -551,7 +551,6 @@ opacity: .1;
 .projects__content{
   display: grid;
   justify-content: center;
-  justify-items: center;
 }
 
 .projects__img{
