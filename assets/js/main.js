@@ -50,7 +50,7 @@ let swiperProjects = new Swiper(".projects__container", {
             slidesPerView: 1
         }
     },
-    keyboard: true,
+    keyboard: true
 });
 
 /*=============== EMAIL JS ===============*/
