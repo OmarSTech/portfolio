@@ -44,7 +44,7 @@
 }
 
 /* Responsive typography */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1023px) {
   :root {
     --biggest-font-size: 3rem;
     --h1-font-size: 2.25rem;
@@ -233,7 +233,7 @@ body.dark-theme {
     cursor: pointer;
 }
 
-@media screen and (max-width: 1023px){
+@media screen and (max-width: 1022px){
     .nav__menu{
         position: fixed;
         width: 88%;
@@ -523,7 +523,7 @@ opacity: .1;
   row-gap: 2rem;
 }
 
-.qualification__country,
+.qualification__location,
 .qualification__year{
   display: block;
   font-size: var(--small-font-size);
@@ -846,9 +846,13 @@ opacity: .1;
 
 /*=============== BREAKPOINTS ===============*/
 /* For Small Devices */
-@media screen and (max-width: 340px){
+@media screen and (min-width: 240px){
+  .header{
+    width: 90%;
+  }
   .container{
       margin-inline: 1rem;
+      justify-self: center;
   }
 
   .nav__menu{
@@ -866,6 +870,14 @@ opacity: .1;
     width: 200px;
     justify-self: center;
   }
+
+  .footer__list{
+    display: grid;
+    justify-content: start;
+    justify-items: center;
+    grid-template-columns: repeat(2, 50%);
+    gap: 1rem 1rem;
+  }
 }
 
 /* For Medium Devices */
@@ -879,7 +891,7 @@ opacity: .1;
     margin: 0 auto;
   }
 
-  .skills__container{
+  .skills__container, .qualification__container{
     justify-content: center;
   }
 
@@ -911,8 +923,7 @@ opacity: .1;
     padding-right: 0;
   }
 
-  .skills__container,
-  .qualification__container{
+  .skills__container{
     grid-template-columns: repeat(2, max-content);
   }
   .skills__container{
@@ -923,13 +934,9 @@ opacity: .1;
     grid-column: span 2;
   }
 
-  .skills__content:nth-child(3) .skills__info{
-    column-gap: 1rem;
-  }
-
   .qualification__container{
     justify-content: center;
-    column-gap: 4rem;
+    column-gap: 2rem;
   }
 
   .projects__container{
@@ -943,6 +950,14 @@ opacity: .1;
   .contact__container{
     justify-content: center;
   }
+}
+
+@media screen and (min-width: 910px) {
+
+  .qualification__container{
+    grid-template-columns: repeat(2, max-content);
+  }
+  
 }
 
 /* For Large Devices */
@@ -1001,6 +1016,11 @@ opacity: .1;
 
   .home__title{
     font-size: var(2.25rem);
+  }
+
+  .qualification__container{
+    justify-content: center;
+    column-gap: 4rem;
   }
 
   .scrollup{
