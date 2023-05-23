@@ -846,13 +846,12 @@ opacity: .1;
 
 /*=============== BREAKPOINTS ===============*/
 /* For Small Devices */
-@media screen and (min-width: 240px){
+@media screen and (max-width: 575px){
   .header{
     width: 90%;
   }
   .container{
       margin-inline: 1rem;
-      justify-self: center;
   }
 
   .nav__menu{
@@ -953,7 +952,6 @@ opacity: .1;
 }
 
 @media screen and (min-width: 910px) {
-
   .qualification__container{
     grid-template-columns: repeat(2, max-content);
   }
@@ -963,6 +961,7 @@ opacity: .1;
 /* For Large Devices */
 @media screen and (min-width: 1023px){
   .header{
+    width: 100%;
     top: 0;
     bottom: initial;
     background-color: var(--body-color);
