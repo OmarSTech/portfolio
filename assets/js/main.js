@@ -43,7 +43,7 @@ let swiperProjects = new Swiper(".projects__container", {
     },
     breakpoints: {
         1200: {
-            slidesPerView: 1,
+            slidesPerView: 2,
             spaceBetween: -56,
         },
         1920: {
@@ -132,6 +132,20 @@ const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
 const iconTheme = 'ri-sun-line'
 
+// Dark theme icon change initial values
+let flag = false
+const githubskillIcon = document.getElementById('gitHub-icon')
+const githubdarkThemeIcon = 'assets/img/github-fill.svg'
+const githublightThemeIcon = 'assets/img/github-icon-1.svg'
+
+const bashskillIcon = document.getElementById('bash-icon')
+const bashdarkThemeIcon = 'assets/img/bashDarkTheme.svg'
+const bashlightThemeIcon = 'assets/img/bash-1.svg'
+
+const sqlskillIcon = document.getElementById('sql-icon')
+const sqldarkThemeIcon = 'assets/img/sqlDarkTheme.png'
+const sqllightThemeIcon = 'assets/img/database.svg'
+
 // Previously selected topic (if user selected)
 const selectedTheme = localStorage.getItem('selected-theme')
 const selectedIcon = localStorage.getItem('selected-icon')
@@ -147,11 +161,38 @@ if(selectedTheme) {
     themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme)
 }
 
+// Check selected theme for flag validation
+if(selectedTheme === 'dark')
+{
+    flag = true
+    githubskillIcon.src = githubdarkThemeIcon
+    bashskillIcon.src = bashdarkThemeIcon
+    sqlskillIcon.src = sqldarkThemeIcon
+}
+
+
+
 // Activate or deactivate theme manually
 themeButton.addEventListener('click', () => {
+    
     //Add or remove dark icon theme
     document.body.classList.toggle(darkTheme)
     themeButton.classList.toggle(iconTheme)
+    
+    //Logic for Skill Icon swap in dark/light theme
+    flag = flag ? false : true
+    
+    if(flag)
+    {
+        githubskillIcon.src = githubdarkThemeIcon
+        bashskillIcon.src = bashdarkThemeIcon
+        sqlskillIcon.src = sqldarkThemeIcon
+    } else{
+        githubskillIcon.src = githublightThemeIcon
+        bashskillIcon.src = bashlightThemeIcon
+        sqlskillIcon.src = sqllightThemeIcon
+    }
+    
     // Save theme and icon user chooses
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
@@ -177,9 +218,10 @@ const sr = ScrollReveal({
 
 sr.reveal('.home__data, .projects__container, .footer__container')
 sr.reveal('.home__info div', {delay: 600, origin: 'bottom', interval: 100})
-sr.reveal('.skills__content:nth-child(1)', {origin: 'left'})
+sr.reveal('.skills__content:nth-child(1)', {origin: 'top'})
 sr.reveal('.skills__content:nth-child(2)', {origin: 'right'})
-sr.reveal('.skills__content:nth-child(3)', {origin: 'bottom'})
+sr.reveal('.skills__content:nth-child(3)', {origin: 'left'})
+sr.reveal('.skills__content:nth-child(4)', {origin: 'bottom'})
 sr.reveal('.qualification__content', {interval: 100})
 sr.reveal('.contact__content', {origin: 'left'})
 sr.reveal('.home__title', {origin: 'left'})
