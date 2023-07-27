@@ -551,6 +551,11 @@ opacity: .1;
 .projects__content{
   display: grid;
   justify-content: center;
+  width: 1024px;
+}
+
+.projects__content .right{
+  justify-items: right;
 }
 
 .projects__img{
@@ -585,48 +590,6 @@ opacity: .1;
 
 .projects__button:hover i{
   transform: translateX(.25rem);
-}
-
-/* Swiper class */
-.projects__container .swiper-button-prev::after,
-.projects__container .swiper-button-next::after{
-  content: '';
-}
-
-.projects__container .swiper-button-prev,
-.projects__container .swiper-button-next{
-  width: initial;
-  height: initial;
-  margin: initial;
-  font-size: 2.5rem;
-  color: var(--title-color);
-}
-
-.projects__container .swiper-button-prev{
-  left: -1rem;
-  top: 4.5rem;
-}
-
-.projects__container .swiper-button-next{
-  right: -1rem;
-  top: 4.5rem;
-}
-
-.projects__container .swiper-slide{
-  margin-bottom: 4.5rem;
-}
-
-.projects__container .swiper-pagination-bullets{
-  bottom: 0;
-}
-
-.projects__container .swiper-pagination-bullet{
-  background-color: var(--text-color-light);
-  opacity: initial;
-}
-
-.projects__container .swiper-pagination-bullet-active{
-  background-color: var(--title-color);
 }
 
 
@@ -897,14 +860,6 @@ opacity: .1;
     width: 400px;
     overflow: hidden;
   }
-
-  .projects__container .swiper-button-prev{
-    left: 1rem;
-  }
-
-  .projects__container .swiper-button-next{
-    right: 1rem;
-  }
 }
 
 @media screen and (min-width: 767px){
@@ -926,10 +881,6 @@ opacity: .1;
   }
   .skills__container{
     column-gap: 5rem;
-  }
-
-  .skills__content:nth-child(3){
-    grid-column: span 2;
   }
 
   .qualification__container{
@@ -1043,7 +994,7 @@ opacity: .1;
   }
 }
 
-@media screen and(min-width: 1200px){
+@media screen and (min-width: 1200px){
 
   .section__border{
     padding-bottom: 6rem;
@@ -1130,20 +1081,7 @@ opacity: .1;
   .projects__container{
     width: 900px;
   }
-  .projects__container .swiper-button-prev,
-  .projects__container .swiper-button-next{
-    font-size: 3rem;
-  }
 
-  .projects__container .swiper-button-prev{
-    left: -1rem;
-  }
-  .projects__container .swiper-button-next{
-    right: -1rem;
-  }
-  .projects__container .swiper-slide{
-    margin-bottom: 6.5rem;
-  }
   .projects__img{
     width: 320px;
     margin-bottom: 2rem;
