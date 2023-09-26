@@ -984,7 +984,7 @@ opacity: .1;
     box-shadow: 0 4px 20px hsla(207, 24%, 35%, .1);
   }
   .dark-theme .bg-header{
-    box-shadow: 0 6px 24ps hsla(207, 24%, 8%, .6);
+    box-shadow: 0 6px 24px hsla(207, 24%, 8%, .6);
   }
 }
 
@@ -1017,7 +1017,8 @@ opacity: .1;
     border-radius: 10.6rem;
   }
   .home__profile img{
-    width: 300px;
+    height: auto;
+    
   }
   .home__shape-waves{
     width: 100px;
@@ -1039,7 +1040,7 @@ opacity: .1;
     font-size: 1.5rem;
   }
   .home__info{
-    grid-template-rows: repeat(3,130px);
+    grid-template-rows: repeat(3, 130px);
     row-gap: 4rem;
     margin-top: 16rem;
   }
