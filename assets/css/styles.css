@@ -1018,7 +1018,7 @@ opacity: .1;
   }
   .home__profile img{
     height: auto;
-    
+    top: 260px;
   }
   .home__shape-waves{
     width: 100px;
