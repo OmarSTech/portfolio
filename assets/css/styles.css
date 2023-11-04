@@ -545,17 +545,13 @@ opacity: .1;
 
 /*=============== PROJECTS ===============*/
 .projects__container{
-  overflow: initial;
+  overflow: none;
 }
 
 .projects__content{
-  display: grid;
+  display: inline-flex;
   justify-content: center;
-  width: 1024px;
-}
-
-.projects__content .right{
-  justify-items: right;
+  width: 100%;
 }
 
 .projects__img{
@@ -564,6 +560,9 @@ opacity: .1;
   margin-bottom: 1.25rem;
 }
 
+.project__info{
+  padding-left: 6rem;
+}
 .projects__subtitle{
   font-size: var(--small-font-size);
   color: var(--text-color-light);
@@ -581,6 +580,7 @@ opacity: .1;
   column-gap: .5rem;
   color: var(--title-color);
   font-size: var(--small-font-size);
+  margin-bottom: 4rem;
 }
 
 .projects__button i{
@@ -832,6 +832,12 @@ opacity: .1;
     justify-self: center;
   }
 
+  .projects__content{
+    display: grid;
+    justify-content: center;
+    width: 100%;
+  }
+
   .footer__list{
     display: grid;
     justify-content: start;
@@ -857,8 +863,8 @@ opacity: .1;
   }
 
   .projects__container{
-    width: 400px;
-    overflow: hidden;
+    width: 100%;
+    justify-self: center;
   }
 }
 
@@ -886,10 +892,6 @@ opacity: .1;
   .qualification__container{
     justify-content: center;
     column-gap: 2rem;
-  }
-
-  .projects__container{
-    width: 500px;
   }
 
   .contact__form{
@@ -927,21 +929,25 @@ opacity: .1;
     margin-inline: 1.5rem;
     padding: 0;
   }
+
   .nav__link i,
   .nav__toggle,
   .nav__close{
     display: none;
   }
+
   .nav__menu{
     width: initial;
     margin-left: auto;
     background-color: var(--body-color);
     transition: background .4s;
   }
+
   .nav__list{
     display: flex;
     column-gap: 3rem;
   }
+
   .nav__link{
     font-size: var(--normal-font-size);
   }
@@ -955,6 +961,7 @@ opacity: .1;
   .change-theme{
     color: var(--text-color-light);
   }
+
   .change-theme:hover{
     color: var(--title-color);
   }
@@ -1018,7 +1025,7 @@ opacity: .1;
   }
   .home__profile img{
     height: auto;
-    top: 260px;
+    top: 264px;
   }
   .home__shape-waves{
     width: 100px;
@@ -1080,7 +1087,7 @@ opacity: .1;
   }
 
   .projects__container{
-    width: 900px;
+    width: 100%;
   }
 
   .projects__img{
